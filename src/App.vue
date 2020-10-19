@@ -28,16 +28,32 @@
       <v-spacer></v-spacer>
 
       <v-btn
+        href="https://twitter.com/seikencha"
+        target="_blank"
+        text
+      >
+        <span class="mr-2">投稿する</span>
+      </v-btn>
+      <v-btn
         href="https://github.com/vuetifyjs/vuetify/releases/latest"
         target="_blank"
         text
       >
-        <span class="mr-2">Latest Release</span>
+        <span class="mr-2">最新更新！</span>
         <v-icon>mdi-open-in-new</v-icon>
       </v-btn>
     </v-app-bar>
 
     <v-main>
+      <HelloWorld/>
+      <v-btn
+        href="https://twitter.com/seikencha"
+        target="_blank"
+        text
+      >
+        <span class="mr-2">自分のサークル</span>
+      </v-btn>
+      
       <HelloWorld/>
     </v-main>
   </v-app>
