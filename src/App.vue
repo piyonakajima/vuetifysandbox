@@ -1,76 +1,88 @@
 <template>
-  <v-app>
+  <v-app id="inspire">
     <v-app-bar
       app
-      color="primary"
-      dark
+      color="#5Cb85C"
+      flat
     >
-      <div class="d-flex align-center">
-        <v-img
-          alt="Vuetify Logo"
-          class="shrink mr-2"
-          contain
-          src="https://cdn.vuetifyjs.com/images/logos/vuetify-logo-dark.png"
-          transition="scale-transition"
-          width="40"
-        />
+      <v-toolbar-title>  ChordSharing  </v-toolbar-title>
 
-        <v-img
-          alt="Vuetify Name"
-          class="shrink mt-1 hidden-sm-and-down"
-          contain
-          min-width="100"
-          src="https://cdn.vuetifyjs.com/images/logos/vuetify-name-dark.png"
-          width="100"
-        />
-      </div>
-
+      <v-responsive max-width="260">
+          <v-text-field
+            :elevation="hover ? 24 : 6"
+            dense
+            flat
+            hide-details
+            rounded
+            solo-inverted
+          ></v-text-field>    
+      </v-responsive>
+      <v-btn icon>
+        <v-icon>mdi-magnify</v-icon>
+      </v-btn>
       <v-spacer></v-spacer>
-
-      <v-btn
-        href="https://twitter.com/seikencha"
-        target="_blank"
-        text
-      >
-        <span class="mr-2">投稿する</span>
-      </v-btn>
-      <v-btn
-        href="https://github.com/vuetifyjs/vuetify/releases/latest"
-        target="_blank"
-        text
-      >
-        <span class="mr-2">最新更新！</span>
-        <v-icon>mdi-open-in-new</v-icon>
-      </v-btn>
+      <v-avatar
+        class="hidden-sm-and-down"
+        color="grey darken-1 shrink"
+        size="32"
+      ></v-avatar>
     </v-app-bar>
 
-    <v-main>
-      <HelloWorld/>
-      <v-btn
-        href="https://twitter.com/seikencha"
-        target="_blank"
-        text
-      >
-        <span class="mr-2">自分のサークル</span>
-      </v-btn>
-      
-      <HelloWorld/>
+    <v-main class="grey lighten-3">
+      <v-container>
+        <v-row>
+          <v-col
+            cols="12"
+            sm="2"
+          >
+            <v-sheet
+              rounded="lg"
+              min-height="268"
+            >
+              <!--  -->
+            </v-sheet>
+          </v-col>
+
+          <v-col
+            cols="12"
+            sm="8"
+          >
+            <v-sheet
+              min-height="70vh"
+              rounded="lg"
+            >
+              <!--  -->
+            </v-sheet>
+          </v-col>
+
+          <v-col
+            cols="12"
+            sm="2"
+          >
+            <v-sheet
+              rounded="lg"
+              min-height="268"
+            >
+              <!--  -->
+            </v-sheet>
+          </v-col>
+        </v-row>
+      </v-container>
     </v-main>
   </v-app>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld';
-
-export default {
-  name: 'App',
-
-  components: {
-    HelloWorld,
-  },
-
-  data: () => ({
-    //
-  }),
-};
+  export default {
+    data: () => ({
+      links: [
+        'あざらし',
+        'Messages',
+        'Profile',
+        'Updates',
+        'あざらしUpdates',
+        'あざらしあざらし'
+      ],
+    }),
+  }
 </script>
